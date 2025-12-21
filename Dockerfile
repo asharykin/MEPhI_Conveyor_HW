@@ -4,7 +4,7 @@ COPY pom.xml .
 COPY src/ src/
 RUN mvn clean package -DskipTests
 
-FROM openjdk:17-jdk-slim
+FROM openjdk:17.0.1-jdk-slim
 WORKDIR /app
 COPY --from=build /app/target/server.jar server.jar
 CMD java -jar server.jar
