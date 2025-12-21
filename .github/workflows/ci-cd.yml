@@ -54,7 +54,7 @@ jobs:
       run: docker build -t spring-boot-server .
 
     - name: Run Docker container
-      run: docker run -d -p 8080:8080 --name avsharykin-skillfactory spting-boot-server
+      run: docker run -d -p 8080:8080 --name avsharykin-skillfactory spring-boot-server
 
     - name: List Docker containers
       run: docker ps
