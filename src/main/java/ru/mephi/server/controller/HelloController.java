@@ -1,11 +1,11 @@
-package ru.mipt.server.controller;
+package ru.mephi.server.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import ru.mipt.server.service.HelloService;
+import ru.mephi.server.service.HelloService;
 
 @RestController
 public class HelloController {

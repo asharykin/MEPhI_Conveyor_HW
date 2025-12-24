@@ -1,4 +1,4 @@
-package ru.mipt.server.service;
+package ru.mephi.server.service;
 
 import org.junit.jupiter.api.Test;
 
