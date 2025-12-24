@@ -1,8 +1,6 @@
-name: HW2 CI/CD
+name: HW4 CI/CD
 
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
 
