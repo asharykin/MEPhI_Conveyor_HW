@@ -58,6 +58,8 @@ jobs:
           cache: maven
 
       - name: Test with Maven
+        env:
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: mvn -B dependency-check:check --file pom.xml
 
       - name: Upload Dependency Check report
