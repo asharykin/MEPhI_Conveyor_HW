@@ -1,4 +1,4 @@
-name: HW4 CI/CD
+name: HW4 Security
 
 on:
   pull_request:
@@ -58,13 +58,13 @@ jobs:
       - name: Test with Maven
         env:
           NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
-        run: mvn -B dependency-check:check --file pom.xml
+        run: mvn -B cyclonedx:makeBom dependency-check:check --file pom.xml
 
-      - name: Upload Dependency Check report
+      - name: Upload Dependency Check report and CycloneDX SBOM
         uses: actions/upload-artifact@v4
         with:
-          name: dependency-check-report
-          path: target/dependency-check-report.html
+          name: security
+          path: target/*
           retention-days: 7
 
   deploy:
